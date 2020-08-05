@@ -6,6 +6,11 @@ app = Flask(__name__)
 
 @app.route('/store-bahamas-client/<string:invoice_id>', methods=['GET', 'POST'])
 def register(invoice_id):
+    NEEDED_ARGS = ['email', 'fiscal_id', 'name']
+    args = request.args
+    for key in NEEDED_ARGS:
+        if key not in args:
+            return "Missing or invalid argument. Please check if all parameters are correct", 400
     return request.args, 200
 
 
