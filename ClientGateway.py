@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/store-bahamas-client/<string:invoice_id>', methods=['GET', 'POST'])
+@app.route('/store-bahamas-client/<invoice_id>')
 def register(invoice_id):
     NEEDED_ARGS = ['email', 'fiscal_id', 'name']
     args = request.args
