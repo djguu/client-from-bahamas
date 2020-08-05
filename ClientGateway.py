@@ -14,6 +14,11 @@ def register(invoice_id):
     return request.args, 200
 
 
+@app.route('/retrieve-bahamas-client/<invoice_id>')
+def retrieve(invoice_id):
+    return invoice_id, 200
+
+
 if __name__ == '__main__':
     from argparse import ArgumentParser
 
