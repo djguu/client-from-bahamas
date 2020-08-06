@@ -4,6 +4,9 @@ import re
 from app import app
 from flask import request
 
+from app import db
+from app.models import Client, Invoice
+
 NEEDED_ARGS = ['email', 'fiscal_id', 'name']
 
 

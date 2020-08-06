@@ -5,8 +5,16 @@ from app import ClientGateway
 
 class Test(TestCase):
     # def test_register(self):
-    #     # self.fail()
-    #     self.run()
+    #     response = ClientGateway.app.get(
+    #         '/store-bahamas-client/1234?fiscal_id=999999999&name=Bob&email=bob@bob.com'
+    #     )
+    #     self.assertEquals(response.status_code, 200)
+
+    # def test_retrieve(self):
+    #     response = ClientGateway.app.get(
+    #         '/store-bahamas-client/1234'
+    #     )
+    #     self.assertEquals(response.status_code, 200)
 
     def test_valid_email(self):
         self.assertTrue(ClientGateway.valid_email("teste@teste.pt"))

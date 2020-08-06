@@ -8,5 +8,7 @@
 
 `flask db init`
 
-`flask db migrate -m "clients table"`
+`flask db migrate -m "tables"`
+
+`flask db upgrade`
 
