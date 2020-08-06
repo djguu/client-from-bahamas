@@ -16,7 +16,5 @@ def register(invoice_id):
 
 @app.route('/retrieve-bahamas-client/<invoice_id>')
 def retrieve(invoice_id):
-    print(app.config['SQLALCHEMY_DATABASE_URL'])
+    print(app.config['SQLALCHEMY_DATABASE_URI'])
     return invoice_id, 200
-    # return app.config['SECRET_KEY']
-
